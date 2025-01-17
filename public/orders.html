@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./build/output.css" rel="stylesheet">
+  <title>orders</title>
+</head>
+<body class="bg-gray-100 font-sans">
+    <!-- Header -->
+    <header class="bg-white shadow-md py-4 px-6 flex justify-between items-center">
+        <div class="flex">
+            <img src="../src/img/Logo.png" alt="logo">
+        </div>
+      <h1 class="text-xl font-bold text-gray-800">داشبورد رستوران</h1>
+      <div class="flex space-x-4 gap-2">
+        <input type="text" placeholder="جستجو..." class="border rounded-lg px-3 py-1 focus:outline-none focus:ring focus:ring-blue-300">
+        <button id="logoutBtn" class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">خروج</button>
+      </div>
+    </header>
+  
+    <div class="flex h-screen">
+      <!-- Sidebar -->
+      <nav class="bg-white w-64 shadow-lg">
+        <ul class="flex flex-col space-y-2 py-6 px-4">
+          <li>
+            <a href="./index.html" class="group block  flex gap-2 px-4 py-4 text-gray-600 hover:bg-blue-600 hover:text-white rounded-lg"> 
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                  </svg>
+                  
+                  داشبورد
+            </a> 
+          </li>
+          <a href="./customer.html" class="group block  flex gap-2 px-4 py-4 text-gray-600 hover:bg-blue-600 hover:text-white rounded-lg"> 
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+              </svg>              
+              مشتریان
+        </a> 
+      </li>
+      <a href="./personel.html" class="group block  flex gap-2 px-4 py-4 text-gray-600 hover:bg-blue-600 hover:text-white rounded-lg"> 
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" />
+          </svg>
+                 
+          پرسنل
+    </a> 
+  </li>
+  <a href="./foodmenu.html" class="group block  flex gap-2 px-4 py-4 text-gray-600 hover:bg-blue-600 hover:text-white rounded-lg"> 
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" />
+      </svg>      
+      منوغذا
+</a> 
+  
+</li>
+<a href="#orders" class="group block  flex gap-2 px-4 py-4 text-gray-600 hover:bg-blue-600 hover:text-white rounded-lg"> 
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+      <path stroke-linecap="round" stroke-linejoin="round" d="m11.99 16.5-3.75 3.75m0 0L4.49 16.5m3.75 3.75V3.75h11.25" />
+    </svg>      
+    سفارشات
+</a> 
+</li>
+        </ul>
+      </nav>
+  
+      <div class="p-6 flex-1">
+        <!-- هدر صفحه -->
+        <div class="flex justify-between items-center mb-6">
+          <h1 class="text-2xl font-bold">سفارشات</h1>
+          <button
+            id="addOrderBtn"
+            class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+          >
+            افزودن سفارش جدید
+          </button>
+        </div>
+  
+        <!-- جدول سفارشات -->
+        <table class="w-full border-collapse border border-gray-300 bg-white">
+          <thead>
+            <tr class="bg-gray-100">
+              <th class="border border-gray-300 px-4 py-2">نام مشتری</th>
+              <th class="border border-gray-300 px-4 py-2">شماره تلفن</th>
+              <th class="border border-gray-300 px-4 py-2">آیتم</th>
+              <th class="border border-gray-300 px-4 py-2">وضعیت</th>
+              <th class="border border-gray-300 px-4 py-2">تاریخ</th>
+              <th class="border border-gray-300 px-4 py-2">عملیات</th>
+            </tr>
+          </thead>
+          <tbody id="orderTableBody">
+            <tr>
+              <td class="border border-gray-300 px-4 py-2">علی رضایی</td>
+              <td class="border border-gray-300 px-4 py-2">09123456789</td>
+              <td class="border border-gray-300 px-4 py-2">پیتزا</td>
+              <td class="border border-gray-300 px-4 py-2">در حال آماده‌سازی</td>
+              <td class="border border-gray-300 px-4 py-2">۱۴۰۲/۰۷/۱۵</td>
+              <td class="border border-gray-300 px-4 py-2 flex justify-center">
+                <button class="edit text-blue-500 hover:underline"
+                  data-name="علی رضایی"
+                  data-phone="09123456789"
+                  data-item="پیتزا"
+                  data-status="در حال آماده‌سازی"
+                  data-date="۱۴۰۲/۰۷/۱۵">ویرایش</button>
+                <button class="deleteOrderBtn text-red-500 hover:underline mr-6">حذف</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+  
+      <!-- پنجره پاپ‌آپ -->
+      <div
+        id="modalOrder"
+        class="hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center"
+      >
+        <div class="bg-white p-6 rounded shadow-md w-1/3">
+          <h2 class="text-xl font-bold mb-4">افزودن سفارش جدید</h2>
+          <form id="orderForm">
+            <div class="mb-4">
+              <label class="block text-sm font-medium mb-1">نام مشتری:</label>
+              <input
+                type="text"
+                class="w-full border border-gray-300 rounded px-3 py-2"
+                placeholder="نام مشتری"
+              />
+            </div>
+            <div class="mb-4">
+              <label class="block text-sm font-medium mb-1">شماره تلفن:</label>
+              <input
+                type="text"
+                class="w-full border border-gray-300 rounded px-3 py-2"
+                placeholder="شماره تلفن"
+              />
+            </div>
+            <div class="mb-4">
+              <label class="block text-sm font-medium mb-1">آیتم:</label>
+              <input
+                type="text"
+                class="w-full border border-gray-300 rounded px-3 py-2"
+                placeholder="آیتم"
+              />
+            </div>
+            <div class="mb-4">
+              <label class="block text-sm font-medium mb-1">وضعیت:</label>
+              <input
+                type="text"
+                class="w-full border border-gray-300 rounded px-3 py-2"
+                placeholder="وضعیت"
+              />
+            </div>
+            <div class="mb-4">
+              <label class="block text-sm font-medium mb-1">تاریخ:</label>
+              <input
+                type="text"
+                class="w-full border border-gray-300 rounded px-3 py-2"
+                placeholder="تاریخ"
+              />
+            </div>
+            <div class="flex justify-end space-x-2">
+              <button
+                type="button"
+                id="closeModalOrder"
+                class="bg-gray-300 px-4 py-2 rounded hover:bg-gray-400"
+              >
+                لغو
+              </button>
+              <button
+                type="submit"
+                class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+              >
+                ذخیره
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <script type="module" src="/src/js/order.js"></script>
+</body>
+
+</html>

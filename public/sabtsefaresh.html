@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./build/output.css" rel="stylesheet">
+  <title>پنل ثبت سفارش</title>
+</head>
+<body class="bg-gray-100 font-sans">
+  <div class="p-6">
+    <!-- هدر صفحه -->
+    <div class="flex justify-between items-center mb-6">
+      <h1 class="text-2xl font-bold">پنل ثبت سفارش</h1>
+      <button id="logoutBtn" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">
+        خروج
+      </button>
+    </div>
+  <!-- فرم دریافت مشخصات مشتری و ثبت سفارش -->
+  <div class="bg-white p-6 rounded shadow-md">
+    <h2 class="text-xl font-bold mb-4">ثبت سفارش مشتری</h2>
+    <form id="orderForm">
+      <!-- مشخصات مشتری -->
+      <div class="mb-4">
+        <label class="block text-sm font-medium mb-1">نام مشتری:</label>
+        <input type="text" placeholder="نام مشتری" class="w-full border border-gray-300 rounded px-3 py-2" required>
+      </div>
+      <div class="mb-4">
+        <label class="block text-sm font-medium mb-1">شماره تلفن:</label>
+        <input type="text" placeholder="شماره تلفن" class="w-full border border-gray-300 rounded px-3 py-2" required>
+      </div>
+      <div class="mb-4">
+        <label class="block text-sm font-medium mb-1">آدرس:</label>
+        <input type="text" placeholder="آدرس" class="w-full border border-gray-300 rounded px-3 py-2" required>
+      </div>
+
+      <!-- آیتم سفارش (Dropdown) -->
+      <div class="mb-4">
+        <label class="block text-sm font-medium mb-1">آیتم سفارش:</label>
+        <select id="foodItem" class=" border border-gray-300 rounded px-3 py-2" required>
+          <option value="" disabled selected>انتخاب آیتم</option>
+          <!-- آیتم‌های غذا از دیتابیس یا لیست ثابت بارگذاری می‌شوند -->
+        </select>
+      </div>
+
+      <!-- تاریخ سفارش -->
+      <div class="mb-4">
+        <label class="block text-sm font-medium mb-1">تاریخ سفارش:</label>
+        <input type="text" id="orderDate" placeholder="تاریخ سفارش" class="w-full border border-gray-300 rounded px-3 py-2" required readonly>
+      </div>
+
+      <!-- دکمه ثبت سفارش -->
+      <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+        ثبت سفارش
+      </button>
+    </form>
+  </div>
+</div>
+<div class="bg-white p-6 rounded shadow-md mt-6">
+  <h2 class="text-xl font-bold mb-4">لیست سفارش‌ها</h2>
+  <table id="orderTable" class="w-full border-collapse">
+    <thead>
+      <tr class="bg-gray-200">
+        <th class="border border-gray-300 px-4 py-2">نام مشتری</th>
+        <th class="border border-gray-300 px-4 py-2">شماره تلفن</th>
+        <th class="border border-gray-300 px-4 py-2">آیتم سفارش</th>
+        <th class="border border-gray-300 px-4 py-2">تاریخ سفارش</th>
+        <th class="border border-gray-300 px-4 py-2">وضعیت</th>
+        <th class="border border-gray-300 px-4 py-2">عملیات</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- سفارش‌ها اینجا نمایش داده می‌شوند -->
+    </tbody>
+  </table>
+  <button id="finalizeBtn" class="mt-4 bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">
+    ثبت نهایی سفارشات
+  </button>
+</div>
+
+  <script src="/src/js/sabtsefaresh.js"></script>
+</body>
+</html>
