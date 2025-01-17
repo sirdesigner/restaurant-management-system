@@ -56,7 +56,13 @@
   </div>
 </div>
 <div class="bg-white p-6 rounded shadow-md mt-6">
-  <h2 class="text-xl font-bold mb-4">لیست سفارش‌ها</h2>
+  <div class="flex flex-row justify-between mb-4">
+    <h2 class="text-xl font-bold  align-middle">لیست سفارش‌ها</h2>
+    <button id="finalizeBtn" class=" bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 ">
+      ثبت نهایی سفارشات
+    </button>
+  </div>
+ 
   <table id="orderTable" class="w-full border-collapse">
     <thead>
       <tr class="bg-gray-200">
@@ -72,9 +78,7 @@
       <!-- سفارش‌ها اینجا نمایش داده می‌شوند -->
     </tbody>
   </table>
-  <button id="finalizeBtn" class="mt-4 bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">
-    ثبت نهایی سفارشات
-  </button>
+  
 </div>
 
   <script src="/src/js/sabtsefaresh.js"></script>
